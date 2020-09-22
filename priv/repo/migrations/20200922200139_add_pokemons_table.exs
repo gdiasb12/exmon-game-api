@@ -9,6 +9,7 @@ defmodule ExMon.Repo.Migrations.AddPokemonsTable do
       add :weight, :integer
       add :types, {:array, :string}
       add :trainer_id, references(:trainers, type: :uuid, on_delete: :delete_all), null: false
+      timestamps()
     end
   end
 end
