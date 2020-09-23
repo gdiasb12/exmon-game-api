@@ -4,7 +4,7 @@ defmodule ExMon.Trainer.Pokemon.Delete do
 
   def call(id) do
     case UUID.cast(id) do
-      :error -> {:error, "Inválid ID format!"}
+      :error -> {:error, "Invalid ID format!"}
       {:ok, uuid} -> delete(uuid)
     end
   end
